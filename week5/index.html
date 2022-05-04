@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello World</title>
+        <!-- hint: remember to change your page title! -->
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="styles/style.css">
+
+        <!-- Leaflet's css-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+        <!-- Leaflet's JavaScript-->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script src="js/papaparse.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <span style = "font-family:Courier">
+            <h1> Visualizing afforable housing for Japanese-American elderly residents</h1>
+            <h3>The second tab speaks on if the people who made the move are happy with it, or if they perfered living at a center closer to them if that opportunity was available.</h3> </span>
+            <!-- space for a menu -->
+        </header>
+
+        <div class="main">
+            <div id="contents">
+                <!-- Be sure to use your own survey here!!!!!!! -->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6LIQDOZppqIpB3bkZPmSGuE-8Y5kLcFKNseeG3LmdV5_kdQ/viewform?embedded=true" width="640" height="2258" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+            </div>
+            <div id="the_map"></div>
+        </div>
+        <div id="footer">
+            Copyright(2022)
+        </div>
+        <script src="js/init.js"></script>
+    </body>
+</html>
