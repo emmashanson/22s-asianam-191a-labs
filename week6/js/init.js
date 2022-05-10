@@ -11,10 +11,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 function addMarker(data){
     // console.log(data)
     // these are the names of our lat/long fields in the google sheets:
-    L.marker([data.lat,data.lng]).addTo(map).bindPopup(`<h2>${data['Location']}</h2> <h3>${data['OpenEnded']}</h3>`)
-    createButtons(data.lat,data.lng,data['Location'])
+    L.marker([data.lat,data.lng]).addTo(map).bindPopup(`<h2>${data.location}</h2> <h3>${data.why}</h3>`)
+    createButtons(data.lat,data.lng,data.location)
     return
 }
+
 
 function createButtons(lat,lng,title){
     const newButton = document.createElement("button"); // adds a new button
@@ -29,7 +30,7 @@ function createButtons(lat,lng,title){
     spaceForButtons.appendChild(newButton);//this adds the button to our page.
 }
 
-const dataUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS2WyfKTyZJ-_ja3GGrxoAXwranavyDGXYsxeFUO4nvHpCJrkKhChymXQqUEyhdGLnz9VN6BJv5tOjp/pub?gid=1560504149&single=true&output=csv"
+const dataUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT6eLIunN6D1XqWjWPN4LokHFRMHou0OFkWyhuGCpm7c-DI0HnCXf__DmPx0ft_8FiT1FrPZWlY-D5H/pub?output=csv"
 
 function loadData(url){
     Papa.parse(url, {
